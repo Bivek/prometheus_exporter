@@ -884,7 +884,7 @@ prometheus_exporter -p 8080 \
                     --prefix 'foo_'
 ```
 
-You can use `-b` option to bind the `prometheus_exporter` web server to any IPv4 interface with `-b 0.0.0.0`, 
+You can use `-b` option to bind the `prometheus_exporter` web server to any IPv4 interface with `-b 0.0.0.0`,
 any IPv6 interface with `-b ::`, or `-b ANY` to any IPv4/IPv6 interfaces available on your host system.
 
 #### Enabling Basic Authentication
@@ -992,24 +992,24 @@ PrometheusExporter::Client.new(log_level: Logger::DEBUG)
 
 ## Docker Usage
 
-You can run `prometheus_exporter` project using an official Docker image:
+You can run `prometheus_exporter` with ruby graphql enabled project using  unoffical public Docker image:
 
 ```bash
-docker pull discourse/prometheus_exporter:latest
+docker pull bless/prometheus_exporter_ruby_with_graphql
 # or use specific version
-docker pull discourse/prometheus_exporter:x.x.x
+docker pull bless/prometheus_exporter_ruby_with_graphql:x.x.x
 ```
 
 The start the container:
 
 ```bash
-docker run -p 9394:9394 discourse/prometheus_exporter
+docker run -p 9000:9394 bless/prometheus_exporter_ruby_with_graphql
 ```
 
 Additional flags could be included:
 
 ```
-docker run -p 9394:9394 discourse/prometheus_exporter --verbose --prefix=myapp
+docker run -p 9000:9394 bless/prometheus_exporter_ruby_with_graphql --verbose --prefix=myapp
 ```
 
 ## Docker/Kubernetes Healthcheck
